@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ClothingStoree.Models.BoughtJewels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>BoughtJewels</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JewelId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JewelId)
+            </td>
+     
+        </tr>
+    }
+</table>
